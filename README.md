@@ -63,16 +63,24 @@ transfer/
 
 ### 1. 环境配置
 
-编辑 `config/local.yaml` 文件，填入你的阿里云OSS配置：
+复制配置模板文件并编辑：
+
+```bash
+cp config/local.yaml.example config/local.yaml
+```
+
+然后编辑 `config/local.yaml` 文件，填入你的阿里云OSS配置：
 
 ```yaml
 aliyun_oss:
   access_key_id: "你的AccessKey_ID"
   access_key_secret: "你的AccessKey_Secret"
-  endpoint: "wavespeed-oss-1232858434884908.oss-ap-southeast-1.oss-accesspoint.aliyuncs.com"
-  bucket: "wavespeed"
-  region: "ap-southeast-1"
+  endpoint: "你的OSS端点"
+  bucket: "你的存储桶名称"
+  region: "你的区域"
 ```
+
+**注意**: `config/local.yaml` 文件已添加到 `.gitignore`，不会被提交到git仓库，可以安全地存储真实的配置信息。
 
 ### 2. 安装依赖
 

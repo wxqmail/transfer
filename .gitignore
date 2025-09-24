@@ -41,6 +41,9 @@ bin/
 logs/
 *.log
 
+# Local configuration files
+config/local.yaml
+
 # Deployment packages
 *.tar.gz
 transfer.tar.gz
